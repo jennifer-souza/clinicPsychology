@@ -9,7 +9,7 @@
     "knex:seed": "knex --knexfile knexfile.ts seed:run"
   },
   "keywords": [],
-  "author": "",
+  "author": "CJ Vieiras",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

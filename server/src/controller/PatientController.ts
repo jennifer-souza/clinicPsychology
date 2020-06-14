@@ -4,13 +4,13 @@ import knex from '../database/connection';
 class PatientController {
 
     async index(request: Request, response: Response) {
-        const patients = await knex('patients')
+        const pacientes = await knex('patients')
             .join('persons', 'patients.id', '=', 'persons.patient_id')
             .join('addresses', 'patients.id', '=', 'addresses.patient_id')
-            .join('phone', 'patients.id', '=', 'phone.patient_id')
-            .select('patients.*');
+            .join('phones', 'patients.id', '=', 'phones.patient_id')
+            .select('patients.*', 'persons.*', 'addresses.*', 'phones.*');            
 
-        response.json(patients);
+        response.json(pacientes);
     }
 }
 
