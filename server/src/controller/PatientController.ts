@@ -12,6 +12,22 @@ class PatientController {
 
         response.json(pacientes);
     }
+
+    async store(request: Request, response: Response) {
+
+    }
+
+    async show(request: Request, response: Response) {
+
+    }
+
+    async edit(request: Request, response: Response) {
+
+    }
+
+    async delete(request: Request, response: Response) {
+
+    }
 }
 
 export default PatientController;
